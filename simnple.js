@@ -1,0 +1,22 @@
+[{
+    "id": 1,
+    "status": false,
+    "time": "dsadas",
+    "Car_no": "dasd",
+    "Customer_id": 2,
+    "Date": "sdad",
+    "Net_weight": 0,
+    "Rate": 0,
+    "Total_payment": 0,
+    "advance": 1000,
+    "received_payment": 0,
+    "Net_received": 0,
+    "Net_Amount": 0,
+    "Net_Balance": 0,
+    "Balance": 0,
+    "broker": "dasd",
+    "driver": "dasd",
+    "f_weight": 1000,
+    "l_weight": 0,
+    "flock_id": 1
+}]

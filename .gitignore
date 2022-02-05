@@ -1,0 +1,5 @@
+node_modules
+# Keep environment variables out of version control
+.env
+sanan-poultry-farm-win32-x64
+sql

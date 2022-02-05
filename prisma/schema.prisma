@@ -1,0 +1,55 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Customer {
+  id      Int      @id @default(autoincrement())
+  Name    String
+  phone   String
+  phone1  String
+  address String
+  date    String
+  des     String
+  order Order[]
+}
+
+model Flock {
+  id     Int      @id @default(autoincrement())
+  flock  String
+  data   String
+  order Order[]
+
+}
+
+model Order {
+  id               Int      @id @default(autoincrement())
+  status           Boolean  @default(false)
+  time             String
+  Car_no           String
+  Customer_id      Int
+  Date             String
+  Net_weight       Int
+  Rate             Int
+  Total_payment    Int
+  advance          Int
+  received_payment Int
+  Net_received     Int
+  Net_Amount       Int
+  Net_Balance      Int
+  Balance          Int
+  broker           String
+  driver           String
+  f_weight         Int
+  l_weight         Int
+  flock_id         Int
+  Customer         Customer @relation(fields: [Customer_id], references: [id])
+  Flock            Flock    @relation(fields: [flock_id], references: [id])
+}
